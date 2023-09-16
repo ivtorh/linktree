@@ -1,15 +1,9 @@
-@media (max-width: 768px) {
-    body {
-        background: var(--bg-mobile-url);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center center;
-        background-size: cover;
-        margin: 0;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+@media (min-width: 768px) {
+    :root {
+        --bg-url: url(../img/bg-desktop.jpg);
+    }
+
+    .light {
+        --bg-url: url(../img/bg-desktop-light.jpg);
     }
 }
