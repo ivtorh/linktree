@@ -1,0 +1,171 @@
+:root {
+    --text-color: #ffffff;
+    --bg-url: url(../img/bg-desktop.jpg);
+    --bg-mobile-url: url(../img/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.2);
+    --emoji-color: invert(0);
+    --switch-bg-url: url(../img/moon-stars.svg);
+}
+
+.light {
+    --text-color: #000000;
+    --bg-url: url(../img/bg-desktop-light.jpg);
+    --bg-mobile-url: url(../img/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.1);
+    --emoji-color: invert(1);
+    --switch-bg-url: url(../img/sun.svg);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    background: var(--bg-url);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.3s ease, transform 0.3s ease;
+    transform: rotate(360deg);
+}
+
+.light body {
+    background: var(--bg-url);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.3s ease, transform 0.3s ease;
+    transform: rotate(0deg);
+}
+
+.container {
+    width: 360px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+}
+
+/* profile */
+
+.profile {
+    text-align: center;
+    padding: 24px;
+}
+
+.profile img {
+    width: 112px;
+}
+
+.profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/* switch */
+
+.switch {
+    margin: 5px auto;
+    position: relative;
+    width: 64px;
+}
+
+.switch button {
+    width: 32px;
+    height: 32px;
+    background: #ffffff var(--switch-bg-url) no-repeat center; 
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-50%);
+    top: 50%;
+    cursor: pointer;
+}
+
+.switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 9999px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    cursor: pointer;
+}
+
+.light .switch button {
+    right: 0;
+    left: initial;
+}
+
+/* links */
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+    list-style: none;
+}
+
+ul li a{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+ion-icon {
+    font-size: 24px;
+}
+
+footer {
+    padding: 48px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.heart {
+    filter: var(--emoji-color);
+}   
