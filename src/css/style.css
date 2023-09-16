@@ -1,7 +1,6 @@
 :root {
     --text-color: #ffffff;
-    --bg-url: url(../img/bg-desktop.jpg);
-    --bg-mobile-url: url(../img/bg-mobile.jpg);
+    --bg-url: url(../img/bg-mobile.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.2);
@@ -11,8 +10,7 @@
 
 .light {
     --text-color: #000000;
-    --bg-url: url(../img/bg-desktop-light.jpg);
-    --bg-mobile-url: url(../img/bg-mobile-light.jpg);
+    --bg-url: url(../img/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.1);
@@ -41,8 +39,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    transition: background 0.3s ease, transform 0.3s ease;
-    transform: rotate(360deg);
+    transition: background 0.3s ease;
 }
 
 .light body {
@@ -57,8 +54,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    transition: background 0.3s ease, transform 0.3s ease;
-    transform: rotate(0deg);
+    transition: background 0.3s ease;
 }
 
 .container {
